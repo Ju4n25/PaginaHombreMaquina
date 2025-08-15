@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - Pregunta 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        p, ul {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+            text-align: left;
+        }
+
+        .botones {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button, a.boton-volver {
+            padding: 0.8rem 1.2rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, a.boton-volver:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pregunta 3</h1>
+    </header>
+
+    <main>
+        <!-- Slide 1 -->
+        <section class="active" id="slide1">
+        
+            <p>
+                En la arquitectura de computadores, los fallos más frecuentes se relacionan con las 
+                limitaciones cognitivas y sensoriales del usuario. La atención limitada puede provocar 
+                que no se detecten alertas importantes, la memoria influye en el olvido de contraseñas o
+                comandos, y la percepción visual puede generar confusiones por botones o señales similares. Estos factores pueden llevar a borrar datos o ejecutar funciones equivocadas.
+            </p>
+           
+            <div class="botones">
+                <span></span>
+                <button onclick="mostrarSlide(2)">Siguiente ➡</button>
+            </div>
+        </section>
+
+        <!-- Slide 2 -->
+        <section id="slide2">
+            <h2>Multidisciplinariedad</h2>
+            <ul>
+                <li><strong>Programadores:</strong> lógica, seguridad y eficiencia del sistema.</li>
+                <li><strong>Diseñadores UX:</strong> experiencia fluida y comprensible.</li>
+                <li><strong>Ilustradores:</strong> estética visual atractiva.</li>
+                <li><strong>Lingüistas:</strong> comunicación clara.</li>
+                <li><strong>Psicólogos:</strong> interacción adaptada al usuario.</li>
+            </ul>
+            <div class="botones">
+                <button onclick="mostrarSlide(1)">⬅ Anterior</button>
+                <button onclick="mostrarSlide(3)">Siguiente ➡</button>
+            </div>
+        </section>
+
+        <!-- Slide 3 -->
+        <section id="slide3">
+            <h2>Arquitectura de Computadores</h2>
+            <p>
+                La <strong>arquitectura de computadores</strong> y la <strong>evolución del hardware</strong> 
+                permiten que las ideas multidisciplinarias se materialicen.
+            </p>
+            <p>
+                Mejoras como procesadores más rápidos, pantallas de alta resolución, 
+                dispositivos táctiles y sensores avanzados hacen posible interfaces más ágiles y atractivas.
+            </p>
+            <div class="botones">
+                <button onclick="mostrarSlide(2)">⬅ Anterior</button>
+                <button onclick="mostrarSlide(4)">Siguiente ➡</button>
+            </div>
+        </section>
+
+        <!-- Slide 4 -->
+        <section id="slide4">
+            <h2>Conclusión</h2>
+            <p>
+                Un procesador multinúcleo permite ejecutar animaciones y procesos complejos 
+                sin afectar la experiencia del usuario. 
+            </p>
+            <p>
+                La innovación en sistemas interactivos depende tanto de la colaboración 
+                entre disciplinas como de los avances físicos en la computación.
+            </p>
+            <div class="botones">
+                <button onclick="mostrarSlide(3)">⬅ Anterior</button>
+                <a href="index.html" class="boton-volver">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+
+    <script>
+        function mostrarSlide(num) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById('slide' + num).classList.add('active');
+        }
+    </script>
+</body>
+</html>

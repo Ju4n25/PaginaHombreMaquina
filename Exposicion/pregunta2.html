@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - Pregunta 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        p, ul {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+            text-align: left;
+        }
+
+        .botones {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button, a.boton-volver {
+            padding: 0.8rem 1.2rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, a.boton-volver:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pregunta 2</h1>
+    </header>
+
+    <main>
+        <!-- Slide 1 -->
+        <section class="active" id="slide1">
+        
+            <p>
+                    La tecnología cambia y por eso los que la usamos también a través de los años, el cambio que ha causado el estar expuesto tanto a la tecnología es que las personas se relacionen de una manera tan íntima con los sistemas informáticos  que ellos están en gran parte de su dia dia, al principio la tecnología era algo reservado a un personal capacitado, el uso de comandos específicos y su gran costo resultaba en que esto quedaba en manos de especialistas que eran los unicos que podian llevar las limitaciones del hardware y la complejidad de las interfaces, hoy la arquitectura es tan variada como su modo de uso, donde prima las  la interacción es intuitiva, multimodal, todo esto en nuestro bolsillo, está comodidad y esta facilidad que genera a causado que los usuarios comiencen a crear ciertas expectativas en cuestión de accesibilidad y respuesta, donde intuyen que el hardware o software se debe adaptar a ellos sin tener ningún conocimiento previo dependiendo de la misma. La arquitectura de computadores, en consecuencia, debe considerar no solo el rendimiento, sino también la ergonomía, la conectividad y la capacidad de evolucionar junto a los patrones de uso humano.
+
+            </p>
+           
+            <div class="botones">
+                <a href="index.html">
+            <button>Volver a Inicio</button>
+            </a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+
+    <script>
+        function mostrarSlide(num) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById('slide' + num).classList.add('active');
+        }
+    </script>
+</body>
+</html>

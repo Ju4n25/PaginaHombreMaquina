@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - Pregunta 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        p, ul {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+            text-align: left;
+        }
+
+        .botones {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button, a.boton-volver {
+            padding: 0.8rem 1.2rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, a.boton-volver:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pregunta 1</h1>
+    </header>
+
+    <main>
+        <!-- Slide 1 -->
+        <section class="active" id="slide1">
+        
+            <p>
+                1 La arquitectura digital y el hardware en general a lo largo de su historia, han pasado de ser unos equipos grandes y de uso para la gente especializada, con interfaces de datos y un uso de métodos de entrada muy limitados, hoy en dia tenemos muchos dispositivos portátiles, con una capacidad alta de procesamiento  y almacenamiento, pero la evolución no solo se limita a la computadora como tal, ya que los que consideran de entrada (teclados, ratones, pantallas táctiles) como de salida (monitores de alta resolución, realidad virtual, displays inmersivos), este avance tan grande pasando de unos grandes y costosos mainframes, donde llegaron las interfaces gráficas con el fin de poder hacer que sean más intuitivas y fáciles de usar, que con el uso de las nuevas tecnologías es la integración de sensores con el fin de captar información del entorno con el dispositivo y luego el uso de la IA para poder mecanizar el razonamiento y toma de decisiones. Uno a uno todos estos avances han transformado la interacción del hombre con la máquina donde la interactividad y la accesibilidad es un pilar fundamental de su uso, lo que da como resultado una arquitectura que fácil de usar.
+
+            </p>
+           
+            <div class="botones">
+                <a href="index.html">
+            <button>Volver a Inicio</button>
+            </a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+
+    <script>
+        function mostrarSlide(num) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById('slide' + num).classList.add('active');
+        }
+    </script>
+</body>
+</html>

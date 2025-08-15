@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - Pregunta 6</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* centra verticalmente */
+            align-items: center; /* centra horizontalmente */
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            animation: fadeInDown 1s ease;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 350px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        a {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 12px 25px;
+            background: #6c5ce7;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background: #5a4dcf;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pregunta 6</h1>
+
+    <div class="container">
+        <div class="card">
+            <p>En el capítulo 2 de Alan Dix, se destaca la importancia de seleccionar correctamente los dispositivos de entrada y salida de información. Esto se conecta con la arquitectura de computadores, ya que el hardware define las posibilidades y límites de estas interacciones.</p>
+        </div>
+        <div class="card">
+            <p>En sistemas de ventas, por ejemplo, el uso de lectores de códigos de barras y pantallas táctiles rápidas depende de una arquitectura que soporte la velocidad y la compatibilidad de estos periféricos.</p>
+        </div>
+        <div class="card">
+            <p>La evolución del hardware, con procesadores más rápidos y redes de mayor velocidad, permite que sistemas críticos como los bancarios o hospitalarios reduzcan errores y mantengan la confianza del usuario.</p>
+        </div>
+        <div class="card">
+            <p>Esto demuestra cómo la elección de hardware y la optimización de la arquitectura de computadores impactan directamente en la experiencia de usuario y la eficiencia de los sistemas interactivos.</p>
+        </div>
+    </div>
+
+    <a href="index.html">Volver al inicio</a>
+
+</body>
+</html>

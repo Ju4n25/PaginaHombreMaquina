@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - Pregunta 7</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        p, ul {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+            text-align: left;
+        }
+
+        .botones {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button, a.boton-volver {
+            padding: 0.8rem 1.2rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, a.boton-volver:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pregunta 7</h1>
+    </header>
+
+    <main>
+        <!-- Slide 1 -->
+        <section class="active" id="slide1">
+        
+            <p>
+               En el capítulo se menciona la importancia de escoger bien los dispositivos de entrada y salida (lectores de código de barras, pantallas rápidas, etc.)
+               y de contar con velocidad en el sistema y la conexión. Esto conecta directamente con la arquitectura de computadores.
+            </p>
+           
+            <div class="botones">
+                <span></span>
+                <button onclick="mostrarSlide(2)">Siguiente ➡</button>
+            </div>
+        </section>
+
+        <!-- Slide 2 -->
+        <section id="slide2">
+            <h2>¿Por qué?</h2>
+            <ul>
+                <li><strong>La arquitectura define cómo se comunican y procesan los datos</strong> entre los componentes (CPU, memoria, buses, dispositivos de entrada/salida), lo que impacta la rapidez y precisión del sistema.</li>
+                <li><strong>La evolución del hardware</strong> ha permitido que los dispositivos sean más eficientes, compactos y especializados (por ejemplo, lectores ópticos más rápidos o pantallas táctiles más sensibles), lo que mejora la interacción humano-computador.</li>
+                <li><strong>Un buen diseño arquitectónico y hardware moderno</strong> reduce los cuellos de botella, evita errores por lentitud y mantiene la confianza del usuario, algo crítico en ventas, banca, hospitales o fábricas.</li>
+            </ul>
+            <div class="botones">
+                <button onclick="mostrarSlide(1)">⬅ Anterior</button>
+                <button onclick="mostrarSlide(3)">Siguiente ➡</button>
+            </div>
+        </section>
+
+        <!-- Slide 3 -->
+        <section id="slide3">
+            <p>
+               La arquitectura de computadores y el desarrollo del hardware no solo mejoran la eficiencia técnica, sino que también impactan directamente en la calidad del servicio y la confianza del usuario, siendo elementos clave para el éxito de cualquier sistema interactivo.
+            </p>
+           
+            <div class="botones">
+                <button onclick="mostrarSlide(3)">⬅ Anterior</button>
+                <a href="index.html" class="boton-volver">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+
+    <script>
+        function mostrarSlide(num) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById('slide' + num).classList.add('active');
+        }
+    </script>
+</body>
+</html>
